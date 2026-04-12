@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>文字サイズ変更くん</title>
+  <style>
+    body {
+      width: 220px;
+      padding: 16px;
+      font-family: sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 14px;
+      color: #333;
+      margin: 0 0 12px;
+      text-align: center;
+    }
+
+    .size-display {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #4285f4;
+      margin-bottom: 12px;
+    }
+
+    .size-display span {
+      font-size: 14px;
+      color: #888;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    button {
+      flex: 1;
+      padding: 8px 0;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background 0.15s;
+    }
+
+    #btn-larger {
+      background: #4285f4;
+      color: white;
+    }
+
+    #btn-larger:hover {
+      background: #3367d6;
+    }
+
+    #btn-smaller {
+      background: #ea4335;
+      color: white;
+    }
+
+    #btn-smaller:hover {
+      background: #c62828;
+    }
+
+    #btn-reset {
+      width: 100%;
+      padding: 6px 0;
+      background: #e0e0e0;
+      color: #555;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    #btn-reset:hover {
+      background: #bdbdbd;
+    }
+
+    .hint {
+      font-size: 11px;
+      color: #999;
+      text-align: center;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>文字サイズ変更くん</h1>
+
+  <div class="size-display">
+    <span id="current-size">--</span> <span>px</span>
+  </div>
+
+  <div class="buttons">
+    <button id="btn-larger" title="文字を大きく">A+</button>
+    <button id="btn-smaller" title="文字を小さく">A-</button>
+  </div>
+
+  <button id="btn-reset">リセット (デフォルト)</button>
+
+  <p class="hint">現在のページに適用されます</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

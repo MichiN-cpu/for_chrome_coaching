@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "文字サイズ変更くん",
+  "version": "1.0",
+  "description": "Webページの文字サイズをワンクリックで変更できる拡張機能",
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "文字サイズ変更くん"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "permissions": ["storage", "activeTab", "scripting"],
+
+  "host_permissions": ["https://*/*", "http://*/*"]
+}
